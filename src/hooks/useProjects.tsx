@@ -8,7 +8,7 @@ import {
 export type CreateProject = Omit<Project, "id" | "status">;
 export type UpdateProject = Partial<Omit<ProjectWithRelationships, "status">>;
 
-const API_BASE_URL = "http://localhost:3000/api/projects";
+const API_BASE_URL = "/api/projects";
 
 const fetchProjects = async (): Promise<ProjectWithRelationships[]> => {
   const data = await fetch(API_BASE_URL);

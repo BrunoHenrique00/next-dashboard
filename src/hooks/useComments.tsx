@@ -3,7 +3,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 export type CreateComment = Pick<Comment, "content" | "projectId">;
 
-const API_BASE_URL = "http://localhost:3000/api/projects/comment";
+const API_BASE_URL = "/api/projects/comment";
 
 // Hook: Buscar todos os projetos
 export const useComments = () => {

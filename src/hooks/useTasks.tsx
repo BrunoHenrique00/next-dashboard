@@ -4,7 +4,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 export type CreateTask = Omit<Task, "id">;
 
-const API_BASE_URL = "http://localhost:3000/api/projects/tasks";
+const API_BASE_URL = "/api/projects/tasks";
 
 // Hook: Buscar todos os projetos
 export const useTasks = () => {
