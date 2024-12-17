@@ -6,6 +6,7 @@ import NavBar from "@/components/ui/nav-bar";
 import QueryProvider from "@/components/providers/query-provider";
 import { Suspense } from "react";
 import Loading from "@/components/ui/loading";
+import Container from "@/components/ui/container";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,7 +41,9 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <NavBar />
-            <Suspense fallback={<Loading />}>{children}</Suspense>
+            <Suspense fallback={<Loading />}>
+              <Container>{children}</Container>
+            </Suspense>
           </ThemeProvider>
         </QueryProvider>
       </body>
