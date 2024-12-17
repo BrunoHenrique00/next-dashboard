@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  // For local testing used SQLite
+  // provider = "sqlite"
+  // url      = "file:./dev.db"
+
+  // For deploy using PostgreSQL
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Project {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+  initialDate DateTime
+  endDate     DateTime
+  owner       String
+
+  // Relationships      
+  tasks    Task[]
+  comments Comment[]
+}
+
+model Task {
+  id          Int     @id @default(autoincrement())
+  description String
+  completed   Boolean @default(false)
+
+  // Relationships
+  projectId Int
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+}
+
+model Comment {
+  id        Int      @id @default(autoincrement())
+  content   String
+  createdAt DateTime @default(now())
+
+  // Relationships
+  projectId Int
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+}
