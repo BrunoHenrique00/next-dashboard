@@ -41,7 +41,7 @@ Antes de começar, certifique-se de ter instalado:
 
 1. **Clone o repositório:**
    ```bash
-   git clone <link-do-seu-repositorio>
+   git clone https://github.com/BrunoHenrique00/next-dashboard.git
    ```
 
 2. **Acesse o diretório do projeto:**
