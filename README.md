@@ -128,6 +128,6 @@ Antes de começar, certifique-se de ter instalado:
 ## Deploy
 
 O projeto foi hospedado na Vercel. Você pode acessá-lo através do link:  
-🔗 **[https://next-dashboard.vercel.app](https://next-dashboard.vercel.app)**  
+🔗 **[https://next-dashboard-ten-olive.vercel.app/](https://next-dashboard-ten-olive.vercel.app/)**  
 
 ---

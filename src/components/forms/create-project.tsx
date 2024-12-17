@@ -144,7 +144,9 @@ export default function CreateProjectModal() {
                 </FormItem>
               )}
             />
-            <Button type="submit">Criar Projeto</Button>
+            <Button type="submit" isLoading={createProject.isPending}>
+              Criar Projeto
+            </Button>
           </form>
         </Form>
       </DialogContent>
